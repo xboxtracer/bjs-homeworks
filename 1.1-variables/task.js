@@ -7,16 +7,18 @@
 
 function averageMark(a, g, p) {
 	
-    // реализуйте здесь задание №1
+	// реализуйте здесь задание №1
+	const avg = (a + g + p) / 3;
     
-	return // ваш ответ;
+	return avg// ваш ответ;
 }
 
 function sayHello(userName) {
 	
+	const helloWord = `Привет, мир! Меня зовут ${userName}`
     // реализуйте здесь задание №2
     
-	return // ваш ответ;
+	return helloWord// ваш ответ;
 }
 
 function calculateFormula() {
