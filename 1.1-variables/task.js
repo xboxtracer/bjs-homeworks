@@ -10,20 +10,24 @@ function averageMark(a, g, p) {
 	// реализуйте здесь задание №1
 	const avg = (a + g + p) / 3;
     
-	return avg// ваш ответ;
+	return avg // ваш ответ;
 }
 
 function sayHello(userName) {
 	
-	const helloWord = `Привет, мир! Меня зовут ${userName}`
     // реализуйте здесь задание №2
+	const helloWord = `Привет, мир! Меня зовут ${userName}`
     
-	return helloWord// ваш ответ;
+	return helloWord // ваш ответ;
 }
 
 function calculateFormula() {
     
 	// реализуйте здесь задание №3
-    
-    return // ваш ответ;
+	const x = 2;
+	const y = 22;
+	const z = 0;
+
+    const result = x * y + 5 * z + x - 1
+    return result // ваш ответ;
 }
