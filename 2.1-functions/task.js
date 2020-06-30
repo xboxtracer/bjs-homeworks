@@ -35,7 +35,6 @@ function getAverageMark(marks) {
         avg += marks[key];
         i++
     };
-    console.log(avg)
     if (i === 0) {
         i++
     }
@@ -49,4 +48,23 @@ function getAverageScore(data) {
     };
     avgMarks.average = getAverageMark(avgMarks)
     return avgMarks
+}
+
+function getDecodedValue(secret) {
+    if (secret === 0) {
+        return 'Родриго'
+    } else {
+        return 'Эмильо'
+    }
+}
+
+function getPersonData(secretData) {
+    let a = []
+    let i = 0;
+    for (let key in secretData) {
+        a[i] = getDecodedValue(secretData[key]);
+        i++;
+    }
+    let pirateName = {firstName: a[0], lastName: a[1]};
+    return pirateName
 }
