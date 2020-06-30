@@ -50,5 +50,3 @@ function getAverageScore(data) {
     avgMarks.average = getAverageMark(avgMarks)
     return avgMarks
 }
-
-console.log(getAverageMark([]))
