@@ -1,3 +1,5 @@
+'use strict'
+
 function parseCount(value) {
     if(!Number.parseInt(value)) {
         throw new Error('Невалидное значение')
