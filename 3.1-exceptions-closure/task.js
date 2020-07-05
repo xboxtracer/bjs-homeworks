@@ -1,25 +1,24 @@
 'use strict'
 
 function parseCount(value) {
-    if(!Number.parseInt(value)) {
+    let parsVal = Number.parseInt(value)
+    if(!parsVal) {
         throw new Error('Невалидное значение')
     }
-    let outValue = Number.parseInt(value)
-    return outValue
+    return parsVal
 }
 
 function validateCount(value) {
     try {
-        parseCount(value)
+        return parseCount(value)
     } catch(e) {
         return e
     };
-    return parseCount(value)
 }
 
 class Triangle {
     constructor(a, b, c) {
-        if(a + b < c) {
+        if(a + b < c || c + b < a || a + c < b) {
             throw new Error('Треугольник с такими сторонами не существует')
         }
         this.a = a
@@ -37,11 +36,12 @@ class Triangle {
 }
 function getTriangle(a, b, c) {
     try {
-        new Triangle(a, b, c)
+        return new Triangle(a, b, c)
     } catch(e) {
         console.log(e)
         throw e
-    } finally {
-        return new Triangle(a, b, c)
     }
 }
+
+const triangle = getTriangle(1,3,100);
+triangle.getArea()
