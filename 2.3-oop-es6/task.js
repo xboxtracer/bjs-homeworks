@@ -9,7 +9,7 @@ class PrintEditionItem {
         this.type = null;
     }
     fix() {
-        this.state = this._state * 1.5;
+        this.state = this.state * 1.5;
     }
     set state(value) {
         // value = value * 1.5;
@@ -26,6 +26,7 @@ class PrintEditionItem {
         return this._state;
     }
 };
+
 class Magazine extends PrintEditionItem {
     constructor(name, releaseDate, pagesCount) {
         super(name, releaseDate, pagesCount);
