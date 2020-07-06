@@ -50,7 +50,7 @@ describe('Домашнее задание к занятию 3.2 «Прототи
       return a + b;
     }
     const mSum = memorize(sum, 10);
-    debugger;
+    // debugger;
 
     let sumTime = performance.now();
     sum(4,5);
