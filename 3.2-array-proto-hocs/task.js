@@ -27,6 +27,21 @@ function compareArrays(arr1, arr2) {
 
 function memorize(fn, limit) {
     const memory = [];
-    memory.push
-    return fn
+    return function(...arg) {
+        if (memory.length !== 0) {
+            let condition = 0;
+            for (let i = 0; i < memory.length; i++) {
+                for (let j = 0; j < arg.length; j++) {
+                    if (arg[j] === memory[i].args[j]) {
+                        condition++
+                    }
+                    if(arg.length === condition) {
+                        return memory[i].result
+                    }
+                }
+            }
+        }
+        memory.push({args: arg, result: fn(...arg)});
+        return fn(...arg)
+    }
 }
